@@ -35,7 +35,7 @@ When trying to fetched the images from the news API, the image URL is returning 
 
 # User Stories and Wireframes
 ### WireFrame
-<img src="https://ibb.co/0cry96g" width="50%"></a>
+<a href="https://ibb.co/0cry96g" target="_blank" ><img src="https://ibb.co/0cry96g" width="50%"></a>
  ### UserStory 1 
  As the developer of the website, I would like to code the skeleton of the website layout and to be able to console.log the desired data <br />
  <br />
@@ -95,4 +95,4 @@ When trying to fetched the images from the news API, the image URL is returning 
 		3. To format the numbers that are shown in front end with a comma separator <br />
 	
 ## Extra Implementation
-	- Implemented a pie chart to show the global covid statistic underneath component 4.
+Implemented a pie chart to show the global covid statistic underneath component 4.
