@@ -100,5 +100,7 @@ $(() => {
 
     });
 
+    const emptyResults = $('#empty').click(function () {
+        $('#newDiv').empty();
+    })
 });
-
