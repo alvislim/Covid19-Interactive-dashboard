@@ -35,7 +35,7 @@ When trying to fetched the images from the news API, the image URL is returning 
 
 # User Stories and Wireframes
 ### WireFrame
-<a href="https://ibb.co/0cry96g" target="_blank" ><img src="https://ibb.co/0cry96g" width="50%"></a>
+Pleaser refer to WireFrame folder
  ### UserStory 1 
  As the developer of the website, I would like to code the skeleton of the website layout and to be able to console.log the desired data <br />
  <br />
