@@ -104,12 +104,12 @@ h5 {
     color: greenyellow;
 }
 
-#submit, #countries {
+#submit, #countries, #empty {
     cursor: pointer;
     border-radius: 15px;
 }
 
-#submit {
+#submit, #empty {
     background-color:rgba(0, 0, 0, 0.2);;
     text-align: center;
     border: none;
