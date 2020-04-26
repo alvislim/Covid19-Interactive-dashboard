@@ -1,0 +1,247 @@
+body {
+    background-color: rgba(14, 8, 8, 0.9);
+    color: white;
+    font-family: 'Lora', serif;
+}
+
+h1 {
+    color: yellow;
+}
+
+h5 {
+    padding-bottom: -5%;
+}
+
+.datetimestamp {
+    color: rgb(129, 124, 100);
+    font-size: small;
+    animation-duration: 400ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#header {
+    display: flex;
+    flex-flow: column wrap;
+    height: 100px;
+    width: fit-content;
+    padding-bottom: 5px;
+    justify-content: flex-start;
+}
+
+
+#par {
+    display: flex;
+    flex-flow: column wrap;
+    /* background-color: rgba(0, 0, 0, 0.45); */
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin:0 auto;
+}
+
+#par2 {
+    display: flex;
+    flex-flow:  wrap;
+    border-radius: 10px;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 350px;
+    width: max-content;
+    /* margin: 0 auto; */
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-top: 1em;
+}
+
+#firstRow {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.info {
+    display: flex;
+    height: auto;
+    width: auto;
+    flex-flow: row wrap;
+}
+
+#today, #total, #newRec, #totRec, #newFate, #totDeath {
+    font-size: 25px;
+    margin-left: 0.5em;
+    text-align: center;
+    animation-duration: 400ms;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    from {
+       opacity: 1;
+    }
+    to {
+       opacity: 0.7;
+    }
+  }
+
+#first, #second, #third, #fourth, #fifth, #sixth {
+    font-size: 20px;
+    margin: 0.5em;
+    text-align: center;
+}
+
+#first, #today, #second, #total {
+    color: royalblue;
+}
+
+#sixth, #totDeath, #third, #newFate {
+    color: red;
+}
+
+#fourth, #newRec, #fifth, #totRec {
+    color: greenyellow;
+}
+
+#submit, #countries {
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+#submit {
+    background-color:rgba(0, 0, 0, 0.2);;
+    text-align: center;
+    border: none;
+    margin-left: 4px;
+    color: white;
+}
+
+#submit:hover {
+    background-color: #9fa9a3;
+    border-color: #9fa9a3;
+}
+
+.filter {
+    display: flex;
+    width: fit-content;
+    height: auto;
+    padding-top: 10px;
+}
+
+#newDiv {
+    display: flex;
+    align-items: center;
+    flex-flow: column wrap;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+#countryHeader {
+    font-size: 28px;
+    color: white;
+}
+
+#secondDiv {
+    margin-top: 15px;
+    height: 500px;
+    width: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    overflow:scroll;
+    overflow-x: hidden;
+}
+
+.resultHeader {
+    display: flex;
+    flex-flow: column wrap;
+    width: 200px;
+    text-align: center;
+    height: fit-content; 
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    color: rgb(129, 124, 100);
+    padding-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.result {
+    font-size: 20px;
+    color: whitesmoke;
+    padding-top: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+
+  }
+::-webkit-scrollbar-track {
+    background-color: rgba(14, 8, 8, 0.4);
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #dfdfdf;
+    border-radius: 10px;
+  }
+
+.noob {
+    border: 1px solid orange;
+}
+
+#thirdRow {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.topFive {
+    text-align: center;
+    color: rgb(129, 124, 100);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.childOfTopFive {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    color: whitesmoke;
+    padding: 5px;
+}
+
+#news {
+    display: flex;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.45);
+    flex-flow: row wrap;
+    overflow: scroll;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-left: 6em;
+    height: 350px;
+    width: 380px;
+} 
+
+a {
+    color: rgb(129, 124, 100);
+    cursor: pointer;
+}
+
+#wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#forNews {
+    font-size: large;
+    color: yellowgreen;
+}
