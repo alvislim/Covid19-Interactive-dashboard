@@ -79,92 +79,6 @@ $(() => {
 
         });
 
-        const totalStatistic = $.ajax({
-            url: `https://api.covid19api.com/summary`,
-            success: function (information) {
-                var finalResult = JSON.stringify(information);
-                let lengthOfData = Object.values(information)[1];
-
-                //to sort countries confirmed cases by highest to lowest and initialized it as topFiveData
-                var topFiveData = lengthOfData.sort(function (a, b) {
-                    return b.TotalConfirmed - a.TotalConfirmed
-                })
-
-                let $thirdRow = $('<div>').attr('id', 'thirdRow');
-                $('#par2').append($thirdRow);
-                //Header for the country
-                let $topFiveCountry = $('<div>').text('Country -> Sorted By Highest Confirmed Case').addClass('topFive');
-                //Header for the confirmed cases
-                let $topFiveConfirmed = $('<div>').text('Confirmed').addClass('topFive');
-                //Header for the deaths
-                let $topFiveDeath = $('<div>').text('Deaths').addClass('topFive');
-                //Header for the recovered
-                let $topFiveRecover = $('<div>').text('Recovered').addClass('topFive');
-
-                /// Graph variable declaration 1. countries, 2. confirmed, death
-                const countriesGraph = [];
-                const confirmedGraph = [];
-                const deathGraph = [];
-                const recoveredGraph = [];
-
-                //to loop through the object and append all of the relevant information
-                for (let i = 0; i < lengthOfData.length; i++) {
-
-                    let $countryTopFive = $('<div>').text(`${topFiveData[i].Country.toLocaleString()}`).addClass('childOfTopFive');
-                    $topFiveCountry.append($countryTopFive);
-
-                    let $confirmedTopFive = $('<div>').text(`${topFiveData[i].TotalConfirmed.toLocaleString()}`).addClass('childOfTopFive');
-                    $topFiveConfirmed.append($confirmedTopFive);
-
-                    let $deathsTopFive = $('<div>').text(`${topFiveData[i].TotalDeaths.toLocaleString()}`).addClass('childOfTopFive');
-                    $topFiveDeath.append($deathsTopFive);
-
-                    let $recoverTopFive = $('<div>').text(`${topFiveData[i].TotalRecovered.toLocaleString()}`).addClass('childOfTopFive');
-                    $topFiveRecover.append($recoverTopFive);
-
-                    $thirdRow.append($topFiveCountry, $topFiveConfirmed, $topFiveDeath, $topFiveRecover);
-                }
-                for (let i = 0; i <= 20; i++) {
-                    countriesGraph.push(topFiveData[i].Country);
-                    confirmedGraph.push(topFiveData[i].TotalConfirmed);
-                    deathGraph.push(topFiveData[i].TotalDeaths);
-                    recoveredGraph.push(topFiveData[i].TotalRecovered);
-                }
-                var myChart = document.getElementById('myChart').getContext('2d');
-
-                var chart = new Chart(myChart, {
-                    type: 'bar',
-                    data: {
-                        labels: countriesGraph,
-                        datasets: [
-                            {
-                                label: 'Confirmed',
-                                data: confirmedGraph,
-                                backgroundColor: '#f1c40f',
-                            },
-                            {
-                                label: 'Death',
-                                data: deathGraph,
-                                backgroundColor: '#2ecc71',
-                            },
-                            {
-                                label: 'Recovered',
-                                data: recoveredGraph,
-                                backgroundColor: '#e74c3c',
-                            },
-                        ]
-                    },
-                    options: {
-                        title: {
-                            display: true,
-                            text: 'Top 20 Country'
-                        }
-                    }
-                })
-
-            }
-        });
-
         /// API call to fetch the news 
         const news = $.ajax({
             url: `https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0297c9e7cfd0454192b97fc6e35188d3`,
@@ -187,5 +101,4 @@ $(() => {
     });
 
 });
-
 
