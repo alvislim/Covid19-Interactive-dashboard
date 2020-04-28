@@ -122,6 +122,11 @@ h5 {
     border-color: #9fa9a3;
 }
 
+#empty:hover {
+    background-color: #9fa9a3;
+    border-color: #9fa9a3;
+}
+
 .filter {
     display: flex;
     width: fit-content;

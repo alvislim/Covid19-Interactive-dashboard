@@ -100,7 +100,9 @@ $(() => {
 
     });
 
-    const emptyResults = $('#empty').click(function () {
+
+    const emptyNewDiv = $('#empty').click(function () {
         $('#newDiv').empty();
     })
+
 });
