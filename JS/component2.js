@@ -20,19 +20,19 @@ $(() => {
                 let $countryHeader = $('<span>').text(`Country: ${country}`).attr('id', 'countryHeader');
                 $('#newDiv').append($countryHeader);
                 //Header for date 
-                let $dateHeader = $('<th>').text('Date').addClass('resultHeader').attr('id', 'dateHeader').addClass("tableHeader");
+                let $dateHeader = $('<div>').text('Date').addClass('resultHeader').attr('id', 'dateHeader').addClass("tableHeader");
                 //Header for confirmed cases
-                let $confirmHeader = $('<th>').text('Confirmed Cases').addClass('resultHeader').attr('id', 'confirmHeader').addClass("tableHeader");
+                let $confirmHeader = $('<div>').text('Confirmed Cases').addClass('resultHeader').attr('id', 'confirmHeader').addClass("tableHeader");
                 //Header for Deaths
-                let $deathHeader = $('<th>').text('Deaths').addClass('resultHeader').attr('id', 'deathHeader').addClass("tableHeader");
+                let $deathHeader = $('<div>').text('Deaths').addClass('resultHeader').attr('id', 'deathHeader').addClass("tableHeader");
                 //Header for total recovered
-                let $recoveredHeader = $('<th>').text('Recovered').addClass('resultHeader').attr('id', 'recoveredHeader').addClass("tableHeader");
+                let $recoveredHeader = $('<div>').text('Recovered').addClass('resultHeader').attr('id', 'recoveredHeader').addClass("tableHeader");
                 //Header for total active cases
-                let $activeHeader = $('<th>').text('Active').addClass('resultHeader').attr('id', 'activeHeader').addClass("tableHeader");
+                let $activeHeader = $('<div>').text('Active').addClass('resultHeader').attr('id', 'activeHeader').addClass("tableHeader");
                 //Header for province
-                let $provinceHeader = $('<th>').text('Province').addClass('resultHeader').addClass("tableHeader");
+                let $provinceHeader = $('<div>').text('Province').addClass('resultHeader').addClass("tableHeader");
 
-                let $secondDiv = $('<table>').attr('id', 'secondDiv');
+                let $secondDiv = $('<div>').attr('id', 'secondDiv');
 
                 ($secondDiv).append($dateHeader, $confirmHeader, $deathHeader, $recoveredHeader, $activeHeader, $provinceHeader);
                 $('#newDiv').append($secondDiv);
@@ -42,21 +42,21 @@ $(() => {
                 /// to append user country selection in a div, sort by latest date order
                 for (let i = result.length - 1; i < result.length; i--) {
                     //date of input value
-                    let $date = $('<td>').text(`${result[i].Date.replace('T00:00:00Z', '')}`).addClass(`result`).attr('id', 'date');
+                    let $date = $('<div>').text(`${result[i].Date.replace('T00:00:00Z', '')}`).addClass(`result`);
                     //total confirmed cases of input value
-                    let $confirmed = $('<td>').text(`${result[i].Confirmed.toLocaleString()}`).addClass(`result`).attr('id', 'confirmed');
+                    let $confirmed = $('<div>').text(`${result[i].Confirmed.toLocaleString()}`).addClass(`result`);
 
                     //total death based on input value 
-                    let $death = $('<td>').text(`${result[i].Deaths.toLocaleString()}`).addClass(`result`).attr('id', 'death');
+                    let $death = $('<div>').text(`${result[i].Deaths.toLocaleString()}`).addClass(`result`);
 
                     //total recovered cases based on input value
-                    let $recovered = $('<td>').text(`${result[i].Recovered.toLocaleString()}`).addClass(`result`).attr('id', 'recovered');
+                    let $recovered = $('<div>').text(`${result[i].Recovered.toLocaleString()}`).addClass(`result`);
 
                     //total active cases based on input value
-                    let $active = $('<td>').text(`${result[i].Active.toLocaleString()}`).addClass(`result`).attr('id', 'active');
+                    let $active = $('<div>').text(`${result[i].Active.toLocaleString()}`).addClass(`result`);
 
                     //province based on input value
-                    let $provinces = $('<td>').text(`${result[i].Province}`).addClass(`result`);
+                    let $provinces = $('<div>').text(`${result[i].Province}`).addClass(`result`);
                     //Append all of the data to designated header
                     $provinceHeader.append($provinces);
                     $dateHeader.append($date);
@@ -100,9 +100,9 @@ $(() => {
 
     });
 
+
     const emptyNewDiv = $('#empty').click(function () {
         $('#newDiv').empty();
     })
 
 });
-
