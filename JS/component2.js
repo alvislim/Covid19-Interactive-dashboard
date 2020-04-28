@@ -91,9 +91,9 @@ $(() => {
                     // objectLength[i].title
                     // objectLength[i].urlToImage
                     // objectLength[i].url
-                    let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '400px').addClass('newsImage');
+                    let $image = $('<img>').attr('src', objectLength[i].urlToImage).addClass('newsImage');
                     let $title = $('<a>').attr('href', objectLength[i].url).text(objectLength[i].title).addClass('newsTitle');
-                    $('#news').append($image, $title);
+                    $('#news').append($title, $image);
                 }
             }
         });

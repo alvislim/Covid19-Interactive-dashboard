@@ -6,9 +6,7 @@ $(() => {
 
             summaryResult = Object.values(results);
 
-            const confirmedCases = [];
-            const totalDeath = [];
-            const TotalRecovered = [];
+
             const dailyConfirmedCase = [];
             const newFatality = [];
             const dailyRecovered = [];
@@ -23,8 +21,6 @@ $(() => {
             //total confirmed cases til date
             let $first = $('<div>').text(`${summaryResult[0].TotalConfirmed.toLocaleString()}`).attr('id', 'today');
             $('#first').append($first);
-            confirmedCases.push(summaryResult[0].TotalConfirmed)
-
 
             //todays new confirmed cases
             let $second = $('<div>').text(`${summaryResult[0].NewConfirmed.toLocaleString()}`).attr('id', 'total');
@@ -39,7 +35,6 @@ $(() => {
             //total recovered til date
             let $fourth = $('<div>').text(`${summaryResult[0].TotalRecovered.toLocaleString()}`).attr('id', 'newRec');
             $('#fourth').append($fourth);
-            TotalRecovered.push(summaryResult[0].TotalRecovered);
 
             //daily newly recovered
             let $fifth = $('<div>').text(`${summaryResult[0].NewRecovered.toLocaleString()}`).attr('id', 'totRec');
@@ -49,7 +44,6 @@ $(() => {
             //total deaths til date
             let $sixth = $('<div>').text(`${summaryResult[0].TotalDeaths.toLocaleString()}`).attr('id', 'totDeath');
             $('#sixth').append($sixth);
-            totalDeath.push(summaryResult[0].TotalDeaths);
 
             const ctx = $('#globalChart');
             const chart = new Chart(globalChart, {
@@ -57,11 +51,11 @@ $(() => {
                 data: {
                     datasets: [
                         {
-                            data: [confirmedCases, totalDeath, TotalRecovered, dailyConfirmedCase, newFatality, dailyRecovered],
-                            backgroundColor: ['#f1c40f', '#2ecc71', '#e74c3c', 'green', 'red', 'blue'],
+                            data: [dailyConfirmedCase, newFatality, dailyRecovered],
+                            backgroundColor: ['#f1c40f', '#2ecc71', '#e74c3c'],
                         },
                     ],
-                    labels: ['Total Confirmed', 'Total Fatalities', 'Total Recovered', 'New Confirmed Cases', 'New Fatalities', 'New Recovered'],
+                    labels: ['New Confirmed Cases', 'New Fatalities', 'New Recovered'],
                 },
                 options: {
                     title: {
