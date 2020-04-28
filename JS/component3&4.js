@@ -97,12 +97,10 @@ $(() => {
             // loop through the whole of news object and append the relevant information
             for (let i = 0; i <= objectLength.length; i++) {
 
-                let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '50px').addClass('newsImage');
-                let $wrapNews = $('<div>').addClass('wrapNews');
+                let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '380px').addClass('newsImage');
                 let $title = $('<a>').attr('href', objectLength[i].url).text(objectLength[i].title).addClass('newsTitle');
                 let $description = $('<p>').text(objectLength[i].description);
-                $wrapNews.append($title, $image, $description);
-                $('#news').append($wrapNews);
+                $('#news').append($title, $image, $description);
             }
         }
     });
