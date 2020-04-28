@@ -104,4 +104,5 @@ $(() => {
     const emptyNewDiv = $('#empty').click(function () {
         $('#newDiv').empty();
     })
-    });
+
+});
