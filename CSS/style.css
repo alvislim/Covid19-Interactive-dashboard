@@ -28,6 +28,7 @@ h5 {
     background-color: whitesmoke;
     width: 600px;
     margin-bottom: 1em;
+    margin-left: 25%;
 }
 
 
@@ -39,20 +40,6 @@ h5 {
     width: fit-content;
     height: fit-content;
     margin:0 auto;
-    background-color: whitesmoke;
-}
-
-#par2 {
-    display: flex;
-    flex-flow: row wrap;
-    border-radius: 10px;
-    justify-content: flex-start;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    height: 350px;
-    width: max-content;
-    overflow: scroll;
-    overflow-x: hidden;
-    margin-top: 1em;
     background-color: whitesmoke;
 }
 
@@ -201,18 +188,6 @@ h5 {
     border-radius: 10px;
   }
 
-.topFive {
-    text-align: center;
-    /* color: rgb(129, 124, 100); */
-    padding: 5px;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-} 
-
-.childOfTopFive {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 5px;
-}
-
 #news {
     display: flex;
     border-radius: 10px;
@@ -222,9 +197,10 @@ h5 {
     cursor: pointer;
     margin-top: 1em;
     margin-left: 2em;
-    height: 350px;
-    width: 550px;
+    height: 450px;
+    width: 500px;
     background-color: whitesmoke;
+    margin-top: 2em;
 } 
 
 a {
@@ -238,6 +214,8 @@ a {
 }
 
 #forNews {
+    display: flex;
+    padding-right: 50px;
     font-size: large;
     /* color: yellowgreen; */
     /* color: rgb(129, 124, 100); */
@@ -250,3 +228,4 @@ a {
 a {
     text-decoration: none;
 }
+
