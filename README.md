@@ -40,7 +40,7 @@ When trying to implement new javascript plugins to enhance the website, having d
 
 # User Stories and Wireframes
 ### WireFrame
-(https://github.com/alvislim/Covid19-Interactive-dashboard/blob/master/Wireframe/Untitled.png)
+![WireFrame Image](https://github.com/alvislim/Covid19-Interactive-dashboard/blob/master/Wireframe/Untitled.png)
 
  ### UserStory 1
  As a user, I would like to see the global statistic of Covid19 cases and the date time stamp that the information is being fetched.<br />
