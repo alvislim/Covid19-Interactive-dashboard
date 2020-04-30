@@ -20,10 +20,11 @@ $(() => {
             const deathGraph = [];
             const recoveredGraph = [];
 
+
             //to loop through the object and append all of the relevant information
             for (let i = 0; i < lengthOfData.length; i++) {
 
-                let $countryTopFive = $('<td>').text(`${topFiveData[i].Country.toLocaleString()}`).addClass('childOfTopFive');
+                let $countryTopFive = $('<td>').text(`${topFiveData[i].Country}`).addClass('childOfTopFive');
 
                 let $confirmedTopFive = $('<td>').text(`${topFiveData[i].TotalConfirmed.toLocaleString()}`).addClass('childOfTopFive');
 
@@ -31,9 +32,10 @@ $(() => {
 
                 let $recoverTopFive = $('<td>').text(`${topFiveData[i].TotalRecovered.toLocaleString()}`).addClass('childOfTopFive');
 
+
                 let $tr = $('<tr>');
-                $tr.append($countryTopFive, $confirmedTopFive, $deathsTopFive, $recoverTopFive)
-                $('#par2').append($tr);
+                $tr.append($countryTopFive, $confirmedTopFive, $deathsTopFive, $recoverTopFive);
+                // $('#tbody').append($tr);
             }
             for (let i = 0; i <= 20; i++) {
                 countriesGraph.push(topFiveData[i].Country);
@@ -85,7 +87,7 @@ $(() => {
             // loop through the whole of news object and append the relevant information
             for (let i = 0; i <= objectLength.length; i++) {
 
-                let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '545px').addClass('newsImage');
+                let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '500px').addClass('newsImage');
                 let $title = $('<a>').attr('href', objectLength[i].url).text(objectLength[i].title).addClass('newsTitle');
                 let $description = $('<p>').text(objectLength[i].description);
                 $('#news').append($title, $image, $description);
@@ -93,4 +95,16 @@ $(() => {
         }
     });
 
+    $('#par2').DataTable( {
+        ajax: {
+            url: `https://api.covid19api.com/summary`,
+            dataSrc: `Countries`
+        },
+        columns: [
+            { data: "Country" }, 
+            { data: "TotalConfirmed" }, 
+            { data: "TotalDeaths" },
+            { data: "TotalDeaths" }
+          ]
+    });
 });

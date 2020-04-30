@@ -33,7 +33,6 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 
-
 </head>
 
 <body>
@@ -310,17 +309,21 @@
     </div>
 
     <div id="wrapper">
-        <table id="par2">
-                <tr>
-                    <th class='topFive'>Country -> Sorted By Highest Confirmed Case</th>
-                    <th class='topFive'>Confirmed</th>
-                    <th class='topFive'>Deaths</th>
-                    <th class='topFive'>Recovered</th>
+        <table id="par2" class='display'>
+            <thead>
+                <tr id = 'topFiveRow'>
+                    <th class='topFive' id='one'>Country -> Sorted By Highest Confirmed Case</th>
+                    <th class='topFive' id = 'two'>Confirmed</th>
+                    <th class='topFive' id ='three'>Deaths</th>
+                    <th class='topFive' id = 'four'>Recovered</th>
                 </tr>
+            </thead>
+            <tbody id = 'tbody'>
+            </tbody>
 
         </table>
 
-        <div id='news'><span id="forNews">Top 10 News from BBC</span></div>
+        <div id='news'><div id="forNews">Top 10 News from BBC </div></div></div>
     </div>
 
 
@@ -328,8 +331,6 @@
     <canvas id="myChart" height="150" width="300"></canvas>
     <canvas id="globalChart" height="150" width="300"></canvas>
 
-
-    </canvas>
 
 
 
