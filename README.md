@@ -1,12 +1,12 @@
 # Covid Interactive Website Scope
 
 ## Table of Content
-- [Project Demo](#Project Demo)
+- [Project Demo](#Project-Demo)
 - [Project Scope and Approach](#Project-Scope-and-Approach)
 - [Technology utilized](#Technology-utilized)
 - [Difficulties](#Difficulties)
 - [User Stories and Wireframes](#User-Stories-and-Wireframes)
-- [Extra Implementation](#Extra Implementation)
+- [Extra Implementation](#Extra-Implementation)
 
 ## Project Demo
 https://alvislim.github.io/Covid19-Interactive-dashboard/ <br />
