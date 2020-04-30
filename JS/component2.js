@@ -65,6 +65,8 @@ $(() => {
                     $recoveredHeader.append($recovered);
                     $activeHeader.append($active);
 
+                    console.log(result[i]);
+
                     ///To append as NA for province, as not all country has province. e.g. singapore
                     if (result[i].Province === '') {
                         $provinces.text('N/A');
@@ -76,8 +78,8 @@ $(() => {
                 alert(`We apologized, ${country} is not included in our DataBase`);
                 location.reload();
             }
-
         });
+    });
 
         /// API call to fetch the news 
         const news = $.ajax({
@@ -98,7 +100,7 @@ $(() => {
             }
         });
 
-    });
+    
 
 
     const emptyNewDiv = $('#empty').click(function () {

@@ -5,6 +5,7 @@ $(() => {
     const totalStatistic = $.ajax({
         url: `https://api.covid19api.com/summary`,
         success: function (information) {
+
             var finalResult = JSON.stringify(information);
             let lengthOfData = Object.values(information)[1];
 
@@ -12,17 +13,6 @@ $(() => {
             var topFiveData = lengthOfData.sort(function (a, b) {
                 return b.TotalConfirmed - a.TotalConfirmed
             })
-
-            let $thirdRow = $('<div>').attr('id', 'thirdRow');
-            $('#par2').append($thirdRow);
-            //Header for the country
-            let $topFiveCountry = $('<div>').text('Country -> Sorted By Highest Confirmed Case').addClass('topFive');
-            //Header for the confirmed cases
-            let $topFiveConfirmed = $('<div>').text('Confirmed').addClass('topFive');
-            //Header for the deaths
-            let $topFiveDeath = $('<div>').text('Deaths').addClass('topFive');
-            //Header for the recovered
-            let $topFiveRecover = $('<div>').text('Recovered').addClass('topFive');
 
             /// Graph variable declaration 1. countries, 2. confirmed, death
             const countriesGraph = [];
@@ -33,19 +23,17 @@ $(() => {
             //to loop through the object and append all of the relevant information
             for (let i = 0; i < lengthOfData.length; i++) {
 
-                let $countryTopFive = $('<div>').text(`${topFiveData[i].Country.toLocaleString()}`).addClass('childOfTopFive');
-                $topFiveCountry.append($countryTopFive);
+                let $countryTopFive = $('<td>').text(`${topFiveData[i].Country.toLocaleString()}`).addClass('childOfTopFive');
 
-                let $confirmedTopFive = $('<div>').text(`${topFiveData[i].TotalConfirmed.toLocaleString()}`).addClass('childOfTopFive');
-                $topFiveConfirmed.append($confirmedTopFive);
+                let $confirmedTopFive = $('<td>').text(`${topFiveData[i].TotalConfirmed.toLocaleString()}`).addClass('childOfTopFive');
 
-                let $deathsTopFive = $('<div>').text(`${topFiveData[i].TotalDeaths.toLocaleString()}`).addClass('childOfTopFive');
-                $topFiveDeath.append($deathsTopFive);
+                let $deathsTopFive = $('<td>').text(`${topFiveData[i].TotalDeaths.toLocaleString()}`).addClass('childOfTopFive');
 
-                let $recoverTopFive = $('<div>').text(`${topFiveData[i].TotalRecovered.toLocaleString()}`).addClass('childOfTopFive');
-                $topFiveRecover.append($recoverTopFive);
+                let $recoverTopFive = $('<td>').text(`${topFiveData[i].TotalRecovered.toLocaleString()}`).addClass('childOfTopFive');
 
-                $thirdRow.append($topFiveCountry, $topFiveConfirmed, $topFiveDeath, $topFiveRecover);
+                let $tr = $('<tr>');
+                $tr.append($countryTopFive, $confirmedTopFive, $deathsTopFive, $recoverTopFive)
+                $('#par2').append($tr);
             }
             for (let i = 0; i <= 20; i++) {
                 countriesGraph.push(topFiveData[i].Country);
@@ -97,7 +85,7 @@ $(() => {
             // loop through the whole of news object and append the relevant information
             for (let i = 0; i <= objectLength.length; i++) {
 
-                let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '380px').addClass('newsImage');
+                let $image = $('<img>').attr('src', objectLength[i].urlToImage).css('width', '545px').addClass('newsImage');
                 let $title = $('<a>').attr('href', objectLength[i].url).text(objectLength[i].title).addClass('newsTitle');
                 let $description = $('<p>').text(objectLength[i].description);
                 $('#news').append($title, $image, $description);
