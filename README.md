@@ -6,6 +6,10 @@
 - [Difficulties](#Difficulties)
 - [User Stories and Wireframes](#User-Stories-and-Wireframes)
 - [Extra Implementation](#Extra Implementation)
+- [Project Demo](#Project Demo)
+
+## Project Demo
+https://alvislim.github.io/Covid19-Interactive-dashboard/ <br />
 
 ## Project Scope and Approach
 The scope of the project is being able to fetch data dynamically from open source APIs, to present the important data in the most user friendly way.
@@ -28,6 +32,7 @@ The website will comprise of 4 components.
 5. Flexbox to make the website responsive
 6. ChartJS for pie and line graph
 7. HTML and CSS 
+8. Datatable plugin for a table that has search, filter and sort function
 
 ## Difficulties
 I encountered some issues while trying to push the changes into GitHub and that was solved but at a later stage. My main priority is to  complete the scope of the project, thus there is no version control or frequent commit, but instead a near completed source code.
@@ -36,18 +41,9 @@ When trying to fetched the images from the news API, the image URL is returning 
 # User Stories and Wireframes
 ### WireFrame
 Pleaser refer to WireFrame folder
- ### UserStory 1 
- As the developer of the website, I would like to code the skeleton of the website layout and to be able to console.log the desired data <br />
- <br />
- **APIs that is being utilized** <br />
- 1. https://covid19api.com <br />
 
-**Requirement** <br />
- 1. the layout of HTML based on the wireFrame <br />
- 2. ensure that the data being console.log is the desired data<br />
-
- ### UserStory 2
- As the developer of the website, I would like to append the dynamic data on both component 1 and 2.<br />
+ ### UserStory 1
+ As a user, I would like to see the global statistic of Covid19 cases and the date time stamp that the information is being fetched.<br />
  <br />
  **APIs that is being utilized** 
  1. https://api.covid19api.com/summary <br />
@@ -57,19 +53,20 @@ Pleaser refer to WireFrame folder
  1. On component 1, to append the date time stamp (in a readable format) base on the time the information is being refreshed <br />
  2. On component 2, to append the Global total number of confirmed cases, total fatalities, total recovered, new confirmed cases, new fatalities and new recovered. <br />
 
- ### UserStory 3
- As the developer of the website, I would like to create a search and filter function that will populate the data based on user input in component 3 <br />
+ ### UserStory 2
+ As a User, I would like to have a search and filter function that will populate the data based on user input <br />
  <br />
  **APIs that is being utilized** 
  1. https://api.covid19api.com/live/country/${country}/status/confirmed/date/2020-01-01T13:13:30Z <br />
+ 2. https://api.covid19api.com/summary <br />
 
 **Requirement** <br />
  <br />
  1. On component 3.1, the search and filter function can accept either a input when user clicks on the option, or a text search <br />
- 2. To append the data dynamically to an empty DIV  <br />
+ 2. On component 3.2, to have a table that is able to sort, filter and search on the covid19 countries statistic  <br />
  
- ### UserStory 4
- As the developer of the website, I would like to append the countries covid stats and top 10 news in component 3 <br />
+ ### UserStory 3
+ As a user, I would like to have to see the top 10 news from BBC <br />
  <br />
  **APIs that is being utilized**
  1. https://api.covid19api.com/summary <br />
@@ -77,12 +74,11 @@ Pleaser refer to WireFrame folder
 
 **Requirement** <br />
  <br />
- 1. On component 3.2, to append the number of countries covid stats which includes country, confirmed, deaths and recovered. Sort by highest confirmed cases <br />
- 2. On componenet 3.3, to append the top 10 news from BBC, which includes images of the news, the URL to the news and the URL image of the news. <br />
+1. On componenet 3.3, to append the top 10 news from BBC, which includes images of the news, the URL to the news and the URL image of the news. <br />
 
  
- ### UserStory 5
- As the developer of the website, I would like to create a graph with information of the covid cases base on country and to improve on the UI<br />
+ ### UserStory 4
+ As a user, I would like to have a graph with information of the covid cases base on country <br />
  <br />
  **APIs that is being utilized**
  1. https://api.covid19api.com/summary <br />
@@ -94,6 +90,6 @@ Pleaser refer to WireFrame folder
 		2. To further improve the UI of the website <br />
 		3. To format the numbers that are shown in front end with a comma separator <br />
 	
-## Extra Implementation
--Implemented a pie chart to show the global covid statistic underneath component 4.
--Added Remove search results button 
+### Extra Implementation
+- Implemented a pie chart to show the global covid statistic underneath component 4.  <br />
+- Added Remove search results button 
