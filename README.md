@@ -90,6 +90,6 @@ Pleaser refer to WireFrame folder
 		2. To further improve the UI of the website <br />
 		3. To format the numbers that are shown in front end with a comma separator <br />
 	
-### Extra Implementation
+## Extra Implementation
 - Implemented a pie chart to show the global covid statistic underneath component 4.  <br />
 - Added Remove search results button 
