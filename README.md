@@ -1,12 +1,12 @@
 # Covid Interactive Website Scope
 
 ## Table of Content
+- [Project Demo](#Project Demo)
 - [Project Scope and Approach](#Project-Scope-and-Approach)
 - [Technology utilized](#Technology-utilized)
 - [Difficulties](#Difficulties)
 - [User Stories and Wireframes](#User-Stories-and-Wireframes)
 - [Extra Implementation](#Extra Implementation)
-- [Project Demo](#Project Demo)
 
 ## Project Demo
 https://alvislim.github.io/Covid19-Interactive-dashboard/ <br />
@@ -14,9 +14,9 @@ https://alvislim.github.io/Covid19-Interactive-dashboard/ <br />
 ## Project Scope and Approach
 The scope of the project is being able to fetch data dynamically from open source APIs, to present the important data in the most user friendly way.
 The APIs that are utilized are
-1. https://covid19api.com
-2. https://newsapi.org/
-3. https://www.chartjs.org/
+- https://covid19api.com
+- https://newsapi.org/
+- https://www.chartjs.org/
 
 The website will comprise of 4 components. 
 1. The first component consists of the title of the website, and timestamp of data being fetched
@@ -36,7 +36,7 @@ The website will comprise of 4 components.
 
 ## Difficulties
 I encountered some issues while trying to push the changes into GitHub and that was solved but at a later stage. My main priority is to  complete the scope of the project, thus there is no version control or frequent commit, but instead a near completed source code.
-When trying to fetched the images from the news API, the image URL is returning NULL, thus i improvised instead of appending news image and title, I changed the approach to news title and description.
+When trying to implement new javascript plugins to enhance the website, having difficulties in understanding / implementing the APIs, takes up a lot of time to understand / consume.
 
 # User Stories and Wireframes
 ### WireFrame
@@ -46,7 +46,7 @@ Pleaser refer to WireFrame folder
  As a user, I would like to see the global statistic of Covid19 cases and the date time stamp that the information is being fetched.<br />
  <br />
  **APIs that is being utilized** 
- 1. https://api.covid19api.com/summary <br />
+ - https://api.covid19api.com/summary <br />
 
 **Requirement** <br />
  <br />
@@ -57,8 +57,8 @@ Pleaser refer to WireFrame folder
  As a User, I would like to have a search and filter function that will populate the data based on user input <br />
  <br />
  **APIs that is being utilized** 
- 1. https://api.covid19api.com/live/country/${country}/status/confirmed/date/2020-01-01T13:13:30Z <br />
- 2. https://api.covid19api.com/summary <br />
+ - https://api.covid19api.com/live/country/${country}/status/confirmed/date/2020-01-01T13:13:30Z <br />
+ - https://api.covid19api.com/summary <br />
 
 **Requirement** <br />
  <br />
@@ -69,8 +69,8 @@ Pleaser refer to WireFrame folder
  As a user, I would like to have to see the top 10 news from BBC <br />
  <br />
  **APIs that is being utilized**
- 1. https://api.covid19api.com/summary <br />
- 2. https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0297c9e7cfd0454192b97fc6e35188d3 <br />
+ - https://api.covid19api.com/summary <br />
+ - https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=0297c9e7cfd0454192b97fc6e35188d3 <br />
 
 **Requirement** <br />
  <br />
@@ -81,10 +81,10 @@ Pleaser refer to WireFrame folder
  As a user, I would like to have a graph with information of the covid cases base on country <br />
  <br />
  **APIs that is being utilized**
- 1. https://api.covid19api.com/summary <br />
- 2. https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js <br />
+ - https://api.covid19api.com/summary <br />
+ - https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js <br />
 
-	 **Requirement** <br />
+**Requirement** <br />
 	  <br />
 		1. On component 4, to append the top 20 countries covid statistic based on the highest number of confirmed cases, which includes country name, confirmed cases, death and recovered in a graph <br />
 		2. To further improve the UI of the website <br />
