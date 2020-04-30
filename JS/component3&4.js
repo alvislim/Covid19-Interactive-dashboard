@@ -20,23 +20,6 @@ $(() => {
             const deathGraph = [];
             const recoveredGraph = [];
 
-
-            //to loop through the object and append all of the relevant information
-            for (let i = 0; i < lengthOfData.length; i++) {
-
-                let $countryTopFive = $('<td>').text(`${topFiveData[i].Country}`).addClass('childOfTopFive');
-
-                let $confirmedTopFive = $('<td>').text(`${topFiveData[i].TotalConfirmed.toLocaleString()}`).addClass('childOfTopFive');
-
-                let $deathsTopFive = $('<td>').text(`${topFiveData[i].TotalDeaths.toLocaleString()}`).addClass('childOfTopFive');
-
-                let $recoverTopFive = $('<td>').text(`${topFiveData[i].TotalRecovered.toLocaleString()}`).addClass('childOfTopFive');
-
-
-                let $tr = $('<tr>');
-                $tr.append($countryTopFive, $confirmedTopFive, $deathsTopFive, $recoverTopFive);
-                // $('#tbody').append($tr);
-            }
             for (let i = 0; i <= 20; i++) {
                 countriesGraph.push(topFiveData[i].Country);
                 confirmedGraph.push(topFiveData[i].TotalConfirmed);
@@ -108,12 +91,5 @@ $(() => {
           ]
     });
 });
-
-
-
-
-
-
-
 
 
