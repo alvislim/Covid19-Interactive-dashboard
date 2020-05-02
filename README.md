@@ -66,7 +66,7 @@ API URL for reference: https://api.covid19api.com/live/country/south-africa/stat
 
 **Requirement** <br />
 
- 1. On component 3.1, the search and filter function can accept either a input when user clicks on the option, or a text search <br /> **Due to the limitation of the API, information is only being fetched from 14 April - 28 April** <br />
+ 1. On component 3.1, the search and filter function can accept either a input when user clicks on the option, or a text search  **Due to the limitation of the API, information is only being fetched from 14 April - 28 April** <br />
  <br />
  2. On component 3.2, to have a table that is able to sort, filter and search on the covid19 countries statistic  <br />
  
@@ -92,9 +92,9 @@ API URL for reference: https://api.covid19api.com/live/country/south-africa/stat
 **Requirement** <br />
 	  <br />
 		1. On component 4, to append the top 20 countries covid statistic based on the highest number of confirmed cases, which includes country name, confirmed cases, death and recovered in a graph <br />
-		<br />
+		
 		2. To further improve the UI of the website <br />
-		<br />
+		
 		3. To format the numbers that are shown in front end with a comma separator <br />
 	
 ## Extra Implementation
