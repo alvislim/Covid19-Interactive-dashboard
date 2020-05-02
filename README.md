@@ -4,7 +4,7 @@
 - [Project Demo](#Project-Demo)
 - [Project Scope and Approach](#Project-Scope-and-Approach)
 - [Technology utilized](#Technology-utilized)
-- [Difficulties](#Difficulties)
+- [Difficulties / Limitation](#Difficulties-/-Limitation)
 - [User Stories and Wireframes](#User-Stories-and-Wireframes)
 - [Extra Implementation](#Extra-Implementation)
 
@@ -34,7 +34,7 @@ The website will comprise of 4 components.
 7. HTML and CSS 
 8. Datatable plugin for a table that has search, filter and sort function
 
-## Difficulties
+## Difficulties / Limitation
 I encountered some issues while trying to push the changes into GitHub and that was solved but at a later stage. My main priority is to  complete the scope of the project, thus there is no version control or frequent commit, but instead a near completed source code.
 When trying to implement new javascript plugins to enhance the website, having difficulties in understanding / implementing the APIs, takes up a lot of time to understand / consume.
 
