@@ -38,7 +38,7 @@ The website will comprise of 4 components.
 I encountered some issues while trying to push the changes into GitHub and that was solved but at a later stage. My main priority is to  complete the scope of the project, thus there is no version control or frequent commit, but instead a near completed source code.
 When trying to implement new javascript plugins to enhance the website, having difficulties in understanding / implementing the APIs, takes up a lot of time to understand / consume.
 
-For the search function in component 3.1, the API only returns 14 of Arpil to 28 of April Covid Statistic. Due to the limitation of the API, that is the best up to date information i am able to retrieve for the users. 
+For the search function in component 3.1, the API only returns 14 of Arpil to 28 of April Covid Statistic. Due to the limitation of the API, that is the best up to date information I am able to retrieve for the Users. 
 
 API URL for reference: https://api.covid19api.com/live/country/south-africa/status/confirmed/date/2020-03-21T13:13:30Z
 
@@ -66,7 +66,7 @@ API URL for reference: https://api.covid19api.com/live/country/south-africa/stat
 
 **Requirement** <br />
  <br />
- 1. On component 3.1, the search and filter function can accept either a input when user clicks on the option, or a text search <br />
+ 1. On component 3.1, the search and filter function can accept either a input when user clicks on the option, or a text search <br /> **Due to the limitation of the API, information is only being fetched from 14 April - 28 April** <br />
  2. On component 3.2, to have a table that is able to sort, filter and search on the covid19 countries statistic  <br />
  
  ### UserStory 3
