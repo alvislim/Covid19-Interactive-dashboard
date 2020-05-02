@@ -38,6 +38,10 @@ The website will comprise of 4 components.
 I encountered some issues while trying to push the changes into GitHub and that was solved but at a later stage. My main priority is to  complete the scope of the project, thus there is no version control or frequent commit, but instead a near completed source code.
 When trying to implement new javascript plugins to enhance the website, having difficulties in understanding / implementing the APIs, takes up a lot of time to understand / consume.
 
+For the search function in component 3.1, the API only returns 14 of Arpil to 28 of April Covid Statistic. Due to the limitation of the API, that is the best up to date information i am able to retrieve for the users. 
+
+API URL for reference: https://api.covid19api.com/live/country/south-africa/status/confirmed/date/2020-03-21T13:13:30Z
+
 # User Stories and Wireframes
 ### WireFrame
 ![WireFrame Image](https://github.com/alvislim/Covid19-Interactive-dashboard/blob/master/Wireframe/Untitled.png)
