@@ -91,10 +91,8 @@ API URL for reference: https://api.covid19api.com/live/country/south-africa/stat
 **Requirement** <br />
 	  <br />
 1. On component 4, to append the top 20 countries covid statistic based on the highest number of confirmed cases, which includes country name, confirmed cases, death and recovered in a graph <br />
-<br />
-		2. To further improve the UI of the website <br />
-		<br />
-		3. To format the numbers that are shown in front end with a comma separator 
+2. To further improve the UI of the website <br />
+3. To format the numbers that are shown in front end with a comma separator 
 	
 ## Extra Implementation
 - Implemented a pie chart to show the global covid statistic underneath component 4.  <br />
