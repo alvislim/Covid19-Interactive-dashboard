@@ -1,5 +1,5 @@
 # Covid Interactive Website Scope
-Project was to showcase using AJAX to make a request to an external data source like OMDBapi and insert some of the data retrieved into the DOM
+This was my first project, it was to showcase using AJAX to make a request to an external data source like OMDBapi and insert some of the data retrieved into the DOM
 Have one or more complex User interface modules such as graph, carousel, sticknav etc
 
 ## Table of Content
