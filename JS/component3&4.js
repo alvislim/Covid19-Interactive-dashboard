@@ -79,6 +79,7 @@ $(() => {
     });
 
     $('#par2').DataTable( {
+        responsive: true,
         ajax: {
             url: `https://api.covid19api.com/summary`,
             dataSrc: `Countries`
@@ -91,3 +92,5 @@ $(() => {
           ]
     });
 });
+
+
