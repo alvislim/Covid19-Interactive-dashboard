@@ -1,176 +1,12 @@
 body {
-    /* background-color: rgba(14, 8, 8, 0.9); */
     color:black;
     font-family: 'Lora', serif; 
 }
-
-h1 {
-    padding-left: 10px;
-}
-
-h5 {
-    padding-bottom: -5%;
-}
-
-.datetimestamp {
-    font-size: small;
-    padding-left: 25px;
-    padding-bottom: 20px;
-}
-
-#header {
-    display: flex;
-    flex-flow: column wrap;
-    height: 100px;
-    padding-bottom: 5px;
-    justify-content: flex-start;
-    border-radius: 15px 50px 30px;
-    background-color: whitesmoke;
-    width: 600px;
-    margin-bottom: 1em;
-    margin-left: 25%;
-}
-
-
-#par {
-    display: flex;
-    flex-flow: column wrap;
-    /* background-color: rgba(0, 0, 0, 0.45); */
-    border-radius: 10px;
-    width: fit-content;
-    height: fit-content;
-    margin:0 auto;
-    background-color: whitesmoke;
-}
-
-#firstRow {
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.info {
-    display: flex;
-    height: auto;
-    width: auto;
-    flex-flow: row wrap;
-}
-
-#today, #total, #newRec, #totRec, #newFate, #totDeath {
-    font-size: 25px;
-    margin-left: 0.5em;
-    text-align: center;
-    /* animation-duration: 400ms;
-    animation-name: blink;
-    animation-iteration-count: infinite;
-    animation-direction: alternate; */
-}
-
-/* @keyframes blink {
-    from {
-       opacity: 1;
-    }
-    to {
-       opacity: 0.7;
-    }
-  } */
 
 #first, #second, #third, #fourth, #fifth, #sixth {
     font-size: 20px;
     margin: 0.5em;
     text-align: center;
-}
-
-#first, #today, #second, #total {
-    /* color: royalblue; */
-}
-
-#sixth, #totDeath, #third, #newFate {
-    /* color: red; */
-}
-
-#fourth, #newRec, #fifth, #totRec {
-    /* color: greenyellow; */
-}
-
-#submit, #countries, #empty {
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-#submit, #empty {
-    background-color:rgb(0, 0, 0);
-    text-align: center;
-    border: none;
-    margin-left: 4px;
-    color: white;
-}
-
-#submit:hover {
-    background-color: #9fa9a3;
-    border-color: #9fa9a3;
-}
-
-#empty:hover {
-    background-color: #9fa9a3;
-    border-color: #9fa9a3;
-}
-
-.filter {
-    display: flex;
-    width: fit-content;
-    height: auto;
-    padding-top: 10px;
-}
-
-#newDiv {
-    display: flex;
-    align-items: center;
-    flex-flow: column wrap;
-    width: auto;
-    height: auto;
-    border-radius: 5px;
-    padding-left: 20px;
-}
-
-#countryHeader {
-    font-size: 28px;
-    /* color: white; */
-}
-
-#secondDiv {
-    margin-top: 15px;
-    height: 350px;
-    width: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    overflow:scroll;
-    overflow-x: hidden;
-    background-color: whitesmoke;
-}
-
-.resultHeader {
-    display: flex;
-    flex-flow: column wrap;
-    width: auto;
-    text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.2); */
-    font-size: 20px;
-    /* color: rgb(129, 124, 100); */
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 5px;
-}
-
-.result {
-    font-size: 15px;
-    color: black;
-    padding-top: 5px;
-    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
-    padding-bottom: 5px;
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 ::-webkit-scrollbar {
@@ -188,44 +24,36 @@ h5 {
     border-radius: 10px;
   }
 
-#news {
-    display: flex;
-    border-radius: 10px;
-    /* background-color: rgba(0, 0, 0, 0.45); */
-    flex-flow: row wrap;
-    overflow: scroll;
-    cursor: pointer;
-    margin-top: 1em;
-    margin-left: 2em;
-    height: 450px;
-    width: 500px;
-    background-color: whitesmoke;
-    margin-top: 2em;
-} 
-
-a {
-    /* color: rgb(129, 124, 100); */
-    cursor: pointer;
-}
-
-#wrapper {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-#forNews {
-    display: flex;
-    padding-right: 50px;
-    font-size: large;
-    /* color: yellowgreen; */
-    /* color: rgb(129, 124, 100); */
-    color: black;
-    text-decoration: underline;
-    text-decoration: bold;
-    font-weight: bold;
-}
-
-a {
-    text-decoration: none;
-}
+.jumbotron {
+    position:relative;
+    overflow:hidden;
+    height: 100%;
+  }
+  
+   .jumbotron .container {
+    position:relative;
+    z-index:2;
+    background:rgba(0,0,0,0.2);
+    padding:2rem;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:3px;
+  }
+  
+  .jumbotron-background {
+    object-fit:cover;
+    font-family: 'object-fit: cover;';
+    position:absolute;
+    top:0;
+    z-index:1;
+    width:100%;
+    height:100vh;
+    opacity:0.5;
+  } 
+   
+   img.blur {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+  
+  }  
 
