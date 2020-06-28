@@ -31,14 +31,14 @@ The website will comprise of 4 components.
 2. Chosen plugin for the search and filter function
 3. Ajax call to fetch data from open source APIs
 4. Javascript for the logic of looping, filtering through objects and arrays
-5. Flexbox to make the website responsive
+5. BootStrap for CSS framework
 6. ChartJS for pie and line graph
 7. HTML and CSS 
 8. Datatable plugin for a table that has search, filter and sort function
 
 ## Difficulties / Limitation
 I encountered some issues while trying to push the changes into GitHub and that was solved but at a later stage. My main priority is to  complete the scope of the project, thus there is no version control or frequent commit, but instead a near completed source code.
-When trying to implement new javascript plugins to enhance the website, having difficulties in understanding / implementing the APIs, takes up a lot of time to understand / consume.
+When trying to implement new javascript plugins to enhance the website, having difficulties in understanding / implementing the APIs, consume a lot of time to understand / implement.
 
 For the search function in component 3.1, the API only returns 14 of Arpil to 28 of April Covid Statistic. Due to the limitation of the API, that is the best up to date information I am able to retrieve for the Users. 
 
